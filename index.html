@@ -336,19 +336,19 @@
             font-size: 0.875rem;
         }
 
-
-/* Cookie Banner Styles */
+/* Cookie Banner Styles - Classic Motorcycles Theme */
 .cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #1a365d;
-    color: white;
+    background: #F5F1E8; /* Latte cream background */
+    color: #2F2F2F; /* Charcoal text */
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: none;
+    border-top: 1px solid #8B0000; /* Blood red border */
 }
 
 .cookie-banner.active {
@@ -373,6 +373,7 @@
 .cookie-text p {
     margin: 0 0 10px 0;
     line-height: 1.5;
+    color: #4A4A4A; /* Slate text */
 }
 
 .cookie-buttons {
@@ -384,42 +385,53 @@
 .cookie-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px; /* Matching site's sharp corners */
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif; /* Matching site font */
 }
 
 .btn-accept {
-    background-color: #58857f;
-    color: white;
+    background-color: #8B0000; /* Blood red */
+    color: #F5F1E8; /* Latte cream text */
+    border: 1px solid #8B0000;
 }
 
 .btn-accept:hover {
-    background-color: #4a726c;
+    background-color: #A52A2A; /* Lighter blood red */
+    border-color: #A52A2A;
 }
 
 .btn-reject {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: #8B0000; /* Blood red text */
+    border: 1px solid #8B0000;
 }
 
 .btn-reject:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #8B0000; /* Blood red background on hover */
+    color: #F5F1E8; /* Latte cream text */
 }
 
 .btn-preferences {
     background-color: transparent;
-    color: white;
+    color: #8B0000; /* Blood red text */
     text-decoration: underline;
+    border: none;
+    padding: 10px 15px;
+}
+
+.btn-preferences:hover {
+    background-color: rgba(139, 0, 0, 0.1); /* Light blood red tint */
+    text-decoration: none;
 }
 
 .cookie-preferences {
     display: none;
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid #E8E4DB; /* Latte dark border */
 }
 
 .cookie-preferences.active {
@@ -428,6 +440,10 @@
 
 .preference-group {
     margin-bottom: 15px;
+    padding: 10px;
+    background: #E8E4DB; /* Latte dark background */
+    border-radius: 2px;
+    border-left: 2px solid #8B0000; /* Blood red accent */
 }
 
 .preference-group label {
@@ -435,6 +451,7 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .preference-toggle {
@@ -457,9 +474,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #6B6B6B; /* Graphite gray */
     transition: .4s;
     border-radius: 24px;
+    border: 1px solid #4A4A4A; /* Slate border */
 }
 
 .preference-slider:before {
@@ -468,14 +486,16 @@
     height: 16px;
     width: 16px;
     left: 4px;
-    bottom: 4px;
-    background-color: white;
+    bottom: 3px;
+    background-color: #F5F1E8; /* Latte cream */
     transition: .4s;
     border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 input:checked + .preference-slider {
-    background-color: #58857f;
+    background-color: #8B0000; /* Blood red when active */
+    border-color: #8B0000;
 }
 
 input:checked + .preference-slider:before {
@@ -485,6 +505,36 @@ input:checked + .preference-slider:before {
 .preference-necessary {
     opacity: 0.7;
     pointer-events: none;
+    background: #F5F1E8; /* Latte cream */
+}
+
+.preference-necessary .preference-slider {
+    background-color: #8B0000; /* Blood red for required */
+    border-color: #8B0000;
+    cursor: not-allowed;
+}
+
+.preference-necessary .preference-slider:before {
+    transform: translateX(26px); /* Always on for required */
+}
+
+/* Cookie banner heading */
+.cookie-text h3 {
+    margin: 0 0 8px 0;
+    color: #2F2F2F; /* Charcoal */
+    font-family: 'Crimson Text', serif; /* Matching site heading font */
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Link styling within cookie text */
+.cookie-text a {
+    color: #8B0000; /* Blood red links */
+    text-decoration: underline;
+}
+
+.cookie-text a:hover {
+    color: #A52A2A; /* Lighter blood red on hover */
 }
 
 @media (max-width: 768px) {
@@ -501,8 +551,14 @@ input:checked + .preference-slider:before {
     .cookie-btn {
         flex: 1;
         text-align: center;
+        min-width: 120px;
+    }
+    
+    .cookie-text {
+        min-width: 100%;
     }
 }
+
 
 
     </style>
