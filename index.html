@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="All In One Property & Roof Care | Maintenance Specialists" />
+    <meta property="og:description" content="Licensed professionals providing top-quality." />
+    <meta property="og:image" content="Social.png" />
+    <meta property="og:url" content="https://www." />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="All In One Property & Roof Care" />
+    <meta name="twitter:description" content="Licensed professionals providing top-quality." />
+    <meta name="twitter:image" content="Social.png" />
+
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#d10000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Classic Motorcycles | Ride History – Own a Classic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'latte': '#F5F1E8',
+                        'latte-dark': '#E8E4DB',
+                        'blood': '#8B0000',
+                        'blood-light': '#A52A2A',
+                        'charcoal': '#2F2F2F',
+                        'slate': '#4A4A4A',
+                        'graphite': '#6B6B6B',
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-left': 'slideLeft 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideLeft: {
+                            '0%': { transform: 'translateX(30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5F1E8;
+            color: #2F2F2F;
+        }
+        
+        .vintage-border {
+            border: 1px solid #8B0000;
+        }
+        
+        .vintage-border-thick {
+            border: 2px solid #8B0000;
+        }
+        
+        .vintage-button {
+            background-color: #F5F1E8;
+            color: #2F2F2F;
+            border: 1px solid #8B0000;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vintage-button:hover {
+            background-color: #8B0000;
+            color: #F5F1E8;
+        }
+        
+        .vintage-button-primary {
+            background-color: #8B0000;
+            color: #F5F1E8;
+            border: 1px solid #8B0000;
+        }
+        
+        .vintage-button-primary:hover {
+            background-color: #A52A2A;
+            border-color: #A52A2A;
+        }
+        
+        .vintage-card {
+            background-color: #F5F1E8;
+            border: 1px solid #8B0000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .vintage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #8B0000, transparent);
+            margin: 3rem 0;
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(245, 241, 232, 0.9);
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(rgba(47, 47, 47, 0.7), rgba(139, 0, 0, 0.5));
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scroll-animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .horizontal-scroll {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+        }
+        
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background-color: #8B0000;
+            border-radius: 3px;
+        }
+        
+        .motorcycle-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .motorcycle-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            color: #F5F1E8;
+            padding: 8px 16px;
+            border-radius: 2px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .spec-item {
+            background: #E8E4DB;
+            padding: 0.75rem;
+            border-radius: 2px;
+            border-left: 2px solid #8B0000;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #F5F1E8, #E8E4DB);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #8B0000;
+        }
+        
+        .social-share-btn {
+            transition: all 0.3s ease;
+            border: 1px solid #8B0000;
+            background: #F5F1E8;
+            color: #2F2F2F;
+        }
+        
+        .social-share-btn:hover {
+            transform: scale(1.1);
+            background: #8B0000;
+            color: #F5F1E8;
+        }
+        
+        .product-id {
+            font-family: monospace;
+            background: #E8E4DB;
+            padding: 0.25rem 0.5rem;
+            border-radius: 2px;
+            font-size: 0.875rem;
+            border: 1px solid #8B0000;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .floating-image {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        
+        .thumbnail {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.05);
+            border-color: #8B0000;
+        }
+        
+        .thumbnail.active {
+            border-color: #8B0000;
+            transform: scale(1.05);
+        }
+        
+        .gallery-container {
+            position: relative;
+        }
+        
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(139, 0, 0, 0.7);
+            color: #F5F1E8;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .gallery-nav:hover {
+            background: rgba(139, 0, 0, 0.9);
+        }
+        
+        .gallery-nav.prev {
+            left: 10px;
+        }
+        
+        .gallery-nav.next {
+            right: 10px;
+        }
+        
+        .image-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(47, 47, 47, 0.7);
+            color: #F5F1E8;
+            padding: 4px 8px;
+            border-radius: 2px;
+            font-size: 0.875rem;
+        }
+
+
+/* Cookie Banner Styles */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1a365d;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-banner.active {
+    display: block;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-text p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-accept {
+    background-color: #58857f;
+    color: white;
+}
+
+.btn-accept:hover {
+    background-color: #4a726c;
+}
+
+.btn-reject {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-reject:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-preferences {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}
+
+.cookie-preferences {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookie-preferences.active {
+    display: block;
+}
+
+.preference-group {
+    margin-bottom: 15px;
+}
+
+.preference-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.preference-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.preference-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.preference-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.preference-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .preference-slider {
+    background-color: #58857f;
+}
+
+input:checked + .preference-slider:before {
+    transform: translateX(26px);
+}
+
+.preference-necessary {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .cookie-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+
+
+<body class="min-h-screen font-poppins">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSLC8ZSK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <p>We use cookies to enhance your experience on our website. Some cookies are necessary for the website to function properly and cannot be switched off. You can set your preferences and learn more about our use of cookies in our <a href="privacy.html" style="color: #58857f; text-decoration: underline;">Cookie Policy</a>.</p>
+            
+            <div id="cookiePreferences" class="cookie-preferences">
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceNecessary" checked disabled>
+                            <span class="preference-slider"></span>
+                        </span>
+                        Necessary Cookies
+                        <span class="preference-necessary">(Always active)</span>
+                    </label>
+                    <p class="preference-desc">Essential for the website to function properly. Cannot be disabled.</p>
+                </div>
+                
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceAnalytics">
+                            <span class="preference-slider"></span>
+                        </span>
+                        Analytics Cookies
+                    </label>
+                    <p class="preference-desc">Allow us to analyze website usage to improve performance.</p>
+                </div>
+                
+                <div class="preference-group">
+                    <label>
+                        <span class="preference-toggle">
+                            <input type="checkbox" id="preferenceMarketing">
+                            <span class="preference-slider"></span>
+                        </span>
+                        Marketing Cookies
+                    </label>
+                    <p class="preference-desc">Used to track visitors across websites for marketing purposes.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cookie-buttons">
+            <button class="cookie-btn btn-accept" id="acceptAll">Accept All</button>
+            <button class="cookie-btn btn-reject" id="rejectNonEssential">Reject Non-Essential</button>
+            <button class="cookie-btn btn-preferences" id="managePreferences">Preferences</button>
+            <button class="cookie-btn btn-accept" id="savePreferences" style="display: none;">Save Preferences</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6 vintage-border-b">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold flex items-center">
+                <i class="fas fa-motorcycle text-blood mr-2"></i>
+                Classic<span class="text-blood">Motorcycles</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Home</a>
+                <a href="#catalog" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Catalogue</a>
+                <a href="#our-story" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Our Story</a>
+                <a href="about.html" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Blog</a>
+                <a href="#testimonials" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Testimonials</a>
+                <a href="#contact" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-charcoal" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute left-0 right-0 top-16 p-4 bg-latte vintage-border-b" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Home</a>
+                <a href="#catalog" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Catalogue</a>
+                <a href="#our-story" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Our Story</a>
+                <a href="about.html" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Blog</a>
+                <a href="#testimonials" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Testimonials</a>
+                <a href="#contact" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-32 px-6 parallax-bg" style="background-image: url('https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto text-center relative z-10 text-latte">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 animate-fade-in">Ride History – Own a Classic</h1>
+            <p class="text-xl max-w-2xl mx-auto mb-10 animate-slide-up">Experience the timeless elegance and raw power of meticulously restored classic motorcycles from the golden era of motorcycling.</p>
+            <a href="#catalog" class="vintage-button-primary font-bold py-4 px-10 rounded-sm inline-block transition-colors transform hover:scale-105 shadow-md animate-slide-up">
+                Browse Motorcycles
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-20 px-6 bg-latte-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-serif font-bold mb-4 text-charcoal">Our Story</h2>
+                <div class="w-24 h-1 bg-blood mx-auto mb-6"></div>
+                <p class="text-lg text-slate max-w-3xl mx-auto">Every classic motorcycle has a story. Here's ours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="scroll-animate">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Founder in workshop" class="w-full h-96 object-cover rounded-sm shadow-lg vintage-border">
+                        <div class="absolute -bottom-6 -right-6 bg-blood text-latte p-6 rounded-sm shadow-lg max-w-xs vintage-border">
+                            <p class="text-sm italic">"Some machines are meant to be preserved, not just restored."</p>
+                            <p class="text-xs mt-2 font-semibold">- Robert Johnson, Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animate">
+                    <h3 class="text-3xl font-serif font-bold mb-6 text-charcoal">The Beginning of a Legacy</h3>
+                    <p class="text-slate mb-4">It started in a small garage in 1989, where a young mechanic named Robert Johnson found his calling. While others saw rust and decay, Robert saw potential and history waiting to be revived.</p>
+                    <p class="text-slate mb-4">His first restoration was a 1967 Triumph Bonneville that had been sitting in a barn for fifteen years. Working late nights after his day job, Robert painstakingly brought the machine back to life, sourcing original parts and studying factory blueprints.</p>
+                    <p class="text-slate mb-6">When that Bonneville roared to life for the first time, something magical happened. The sound wasn't just an engine starting—it was history breathing again.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blood rounded-full flex items-center justify-center text-latte">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-charcoal">From Garage to Gallery</h4>
+                            <p class="text-sm text-slate">What began as passion became profession</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="scroll-animate order-2 lg:order-1">
+                    <h3 class="text-3xl font-serif font-bold mb-6 text-charcoal">The Art of Preservation</h3>
+                    <p class="text-slate mb-4">Over three decades, we've developed a philosophy that guides every restoration: respect the original while ensuring reliability for the road. We don't just fix motorcycles—we preserve legacies.</p>
+                    <p class="text-slate mb-4">Each machine that enters our workshop receives the same careful attention Robert gave that first Bonneville. Our team of master technicians combines traditional craftsmanship with modern expertise.</p>
+                    <p class="text-slate mb-6">We've sourced parts from every corner of the globe, rebuilt engines with the precision of watchmakers, and preserved patina that tells a story no new part ever could.</p>
+                    <div class="bg-latte p-6 rounded-sm vintage-border">
+                        <p class="text-slate italic mb-2">"We don't just sell motorcycles. We become custodians of history, ensuring these mechanical works of art continue to inspire for generations to come."</p>
+                    </div>
+                </div>
+                <div class="scroll-animate order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Restoration process" class="w-full h-96 object-cover rounded-sm shadow-lg vintage-border">
+                        <div class="absolute -top-4 -left-4 bg-charcoal text-latte p-4 rounded-sm vintage-border">
+                            <p class="text-sm font-semibold">Since 1989</p>
+                            <p class="text-xs">Preserving motorcycle heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-latte rounded-sm p-8 vintage-border scroll-animate">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-serif font-bold mb-4 text-charcoal">Our Promise to You</h3>
+                    <div class="w-16 h-1 bg-blood mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blood rounded-full flex items-center justify-center text-latte mx-auto mb-4">
+                            <i class="fas fa-history text-xl"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-lg mb-2 text-charcoal">Authenticity</h4>
+                        <p class="text-slate text-sm">Every motorcycle is restored with period-correct parts and techniques, maintaining its original character and soul.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blood rounded-full flex items-center justify-center text-latte mx-auto mb-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-lg mb-2 text-charcoal">Documentation</h4>
+                        <p class="text-slate text-sm">Complete provenance verification and restoration records accompany every motorcycle we sell.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blood rounded-full flex items-center justify-center text-latte mx-auto mb-4">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-lg mb-2 text-charcoal">Lifetime Support</h4>
+                        <p class="text-slate text-sm">Our relationship doesn't end at purchase. We provide ongoing support and expertise for all our clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 scroll-animate">
+                <p class="text-lg text-slate italic mb-6">"The roar of a classic engine isn't just noise—it's the sound of history coming alive."</p>
+                <a href="#catalog" class="vintage-button-primary font-bold py-3 px-8 rounded-sm inline-block transition-colors transform hover:scale-105">
+                    Discover Our Collection
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motorcycle Catalogue -->
+    <section id="catalog" class="py-20 px-6 bg-latte">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-serif font-bold mb-4 text-center text-charcoal scroll-animate">Classic Motorcycle Catalogue</h2>
+            <p class="text-lg text-slate text-center mb-12 max-w-2xl mx-auto scroll-animate">Browse our curated collection of fully restored classic motorcycles, each with its own unique story and character.</p>
+            
+            <!-- Motorcycle Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Motorcycle Card 1 -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-1">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="1972 Triumph Bonneville" class="w-full h-64 object-cover main-image" data-bike="1">
+                            <div class="absolute top-4 right-4 price-tag">£2,800</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-72841
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="1">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="1">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="1">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Triumph Bonneville Front View" class="thumbnail h-16 w-full object-cover active" data-bike="1" data-index="0">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Triumph Bonneville Side View" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="1">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Triumph Bonneville Engine" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Triumph Bonneville Details" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Triumph Bonneville Rear" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Triumph Bonneville Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Triumph Bonneville Wheels" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1972 Triumph Bonneville</h3>
+                        <p class="text-slate mb-4">Fully restored to original specifications with matching numbers.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>650cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>110 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>12,450 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 12 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">£2,800</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1972</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="1">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="1">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="1">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="1">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="1">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Motorcycle Card 2 -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
+                            <div class="absolute top-4 right-4 price-tag">£1,750</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-62983
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="2">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
+                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>900cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>115 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>8,720 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">£1,750</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Motorcycle Card 2 -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
+                            <div class="absolute top-4 right-4 price-tag">£3,150</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-62983
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="2">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
+                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>900cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>115 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>8,720 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">£3,150</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Motorcycle Card 2 -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
+                            <div class="absolute top-4 right-4 price-tag">£2,750</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-62983
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="2">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
+                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>900cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>115 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>8,720 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">2,750</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Motorcycle Card 2 -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
+                            <div class="absolute top-4 right-4 price-tag">£4,350</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-62983
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="2">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="2">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
+                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>900cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>115 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>8,720 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">£4,350</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional motorcycle cards with GBP prices -->
+                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-3">
+                    <div class="gallery-container">
+                        <div class="relative">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="1975 Norton Commando 850" class="w-full h-64 object-cover main-image" data-bike="3">
+                            <div class="absolute top-4 right-4 price-tag">£3,200</div>
+                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                                Item #CM-58219
+                            </div>
+                            <button class="gallery-nav prev hidden" data-bike="3">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav next hidden" data-bike="3">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="image-counter hidden" data-bike="3">1/7</div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Norton Commando Front View" class="thumbnail h-16 w-full object-cover active" data-bike="3" data-index="0">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Norton Commando Side View" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="1">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Norton Commando Engine" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="2">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Norton Commando Details" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="3">
+                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Norton Commando Rear" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="4">
+                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Norton Commando Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="5">
+                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Norton Commando Wheels" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="6">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1975 Norton Commando 850</h3>
+                        <p class="text-slate mb-4">British classic with recent comprehensive restoration.</p>
+                        
+                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-blood mr-2"></i>
+                                <span>828cc</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                                <span>115 mph</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-road text-blood mr-2"></i>
+                                <span>15,230 miles</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt text-blood mr-2"></i>
+                                <span>MOT: 12 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-blood font-bold text-lg">£3,200</span>
+                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1975</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="3">View Details</button>
+                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="3">
+                                <i class="fas fa-calendar-alt"></i>
+                            </button>
+                        </div>
+                        <div class="border-t border-blood/20 pt-4">
+                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                            <div class="flex justify-center space-x-4">
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="3">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="3">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="3">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="3">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16 scroll-animate">
+                <button class="vintage-button-primary font-bold py-4 px-10 rounded-sm inline-block transition-colors transform hover:scale-105 shadow-md">
+                    View Full Catalogue
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-6 bg-latte-dark">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-4xl font-serif font-bold mb-4 text-center text-charcoal scroll-animate">What Our Customers Say</h2>
+            <p class="text-lg text-slate text-center mb-12 max-w-2xl mx-auto scroll-animate">Hear from collectors and enthusiasts who have found their dream classic motorcycle with us.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-sm scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blood rounded-full flex items-center justify-center text-latte font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold text-charcoal">John Doe</h4>
+                            <p class="text-sm text-slate">1974 BMW R90S Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-slate italic">"The team at Classic Motorcycles exceeded all my expectations. The restoration quality on my BMW is simply impeccable. It's like riding a brand new bike from the 70s!"</p>
+                    <div class="flex text-yellow-500 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-sm scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blood rounded-full flex items-center justify-center text-latte font-bold mr-4">SR</div>
+                        <div>
+                            <h4 class="font-bold text-charcoal">John Doe</h4>
+                            <p class="text-sm text-slate">1965 Triumph TR6 Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-slate italic">"I've been searching for the perfect Triumph for years. Classic Motorcycles not only found it but restored it to better than factory condition. The documentation provided was incredibly thorough."</p>
+                    <div class="flex text-yellow-500 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-sm scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blood rounded-full flex items-center justify-center text-latte font-bold mr-4">MK</div>
+                        <div>
+                            <h4 class="font-bold text-charcoal">John Doe</h4>
+                            <p class="text-sm text-slate">1978 Honda CB750 Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-slate italic">"The buying process was seamless from start to finish. The team was knowledgeable and patient with all my questions. My CB750 arrived perfectly packaged and ready to ride."</p>
+                    <div class="flex text-yellow-500 mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-latte">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-4xl font-serif font-bold mb-10 text-center text-charcoal scroll-animate">Get In Touch</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="scroll-animate">
+                    <form class="bg-latte-dark p-8 rounded-sm shadow-md vintage-border">
+                        <h3 class="text-2xl font-serif font-bold mb-6 text-charcoal">Send Us a Message</h3>
+                        <div class="mb-4">
+                            <label class="block text-slate mb-2 font-medium" for="name">Full Name</label>
+                            <input type="text" id="name" class="w-full p-3 border border-blood/30 rounded-sm focus:outline-none focus:border-blood bg-latte">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-slate mb-2 font-medium" for="email">Email Address</label>
+                            <input type="email" id="email" class="w-full p-3 border border-blood/30 rounded-sm focus:outline-none focus:border-blood bg-latte">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-slate mb-2 font-medium" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full p-3 border border-blood/30 rounded-sm focus:outline-none focus:border-blood bg-latte">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-slate mb-2 font-medium" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full p-3 border border-blood/30 rounded-sm focus:outline-none focus:border-blood bg-latte"></textarea>
+                        </div>
+                        <button type="submit" class="w-full vintage-button-primary font-bold py-3 rounded-sm transition-colors transform hover:scale-105">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="scroll-animate">
+                    <div class="bg-latte-dark p-8 rounded-sm shadow-md vintage-border mb-6">
+                        <h3 class="text-2xl font-serif font-bold mb-6 text-charcoal">Visit Our Showroom</h3>
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-blood mt-1 mr-3"></i>
+                            <div>
+                                <p class="text-slate font-medium">123 Vintage Avenue</p>
+                                <p class="text-slate">Birmingham, B1 1AA</p>
+                                <p class="text-slate">United Kingdom</p>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-serif font-bold mb-4 text-charcoal mt-8">Contact Information</h3>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone text-blood mr-3"></i>
+                            <p class="text-slate">0121 123 4567</p>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-envelope text-blood mr-3"></i>
+                            <p class="text-slate">info@classicmotorcycles.co.uk</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-serif font-bold mb-4 text-charcoal">Business Hours</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-slate">Monday - Friday</span>
+                                <span class="text-slate font-medium">9am - 6pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate">Saturday</span>
+                                <span class="text-slate font-medium">10am - 4pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate">Sunday</span>
+                                <span class="text-slate font-medium">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-latte py-12 px-6 vintage-border-t">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 flex items-center">
+                        <i class="fas fa-motorcycle text-blood mr-2"></i>
+                        Classic<span class="text-blood">Motorcycles</span>
+                    </h3>
+                    <p class="text-graphite mb-4">Preserving motorcycle heritage since 1989.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Home</a></li>
+                        <li><a href="#catalog" class="text-graphite hover:text-blood transition-colors">Motorcycle Catalogue</a></li>
+                        <li><a href="about.html" class="text-graphite hover:text-blood transition-colors">Blog</a></li>
+                        <li><a href="#testimonials" class="text-graphite hover:text-blood transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="text-graphite hover:text-blood transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-graphite hover:text-blood transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Motorcycle Sales</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Restoration Services</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Appraisals</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Parts Sourcing</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Newsletter</h4>
+                    <p class="text-graphite mb-4">Subscribe to receive updates on new arrivals and restoration projects.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-slate text-latte p-2 rounded-l-sm w-full focus:outline-none focus:border-blood border border-blood/30">
+                        <button class="bg-blood hover:bg-blood-light text-latte p-2 rounded-r-sm transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate/20 mt-8 pt-8 text-center text-graphite">
+                <p>&copy; 2025 Classic Motorcycles. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations and interactions -->
+    <script>
+        // Motorcycle image data
+        const motorcycleImages = {
+            1: [
+                "https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg",
+                "https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg",
+                "https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg",
+                "https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg",
+                "https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg",
+                "https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg",
+                "https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg"
+            ],
+            2: [
+                "https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg",
+                "https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg",
+                "https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg",
+                "https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg",
+                "https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg",
+                "https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg",
+                "https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg"
+            ],
+            3: [
+                "https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg",
+                "https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg",
+                "https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg",
+                "https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg",
+                "https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg",
+                "https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg",
+                "https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg"
+            ]
+        };
+
+        // Initialize current image index for each bike
+        const currentImageIndex = {};
+        Object.keys(motorcycleImages).forEach(bikeId => {
+            currentImageIndex[bikeId] = 0;
+        });
+
+        // Thumbnail click handler
+        document.querySelectorAll('.thumbnail').forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const bikeId = this.getAttribute('data-bike');
+                const index = parseInt(this.getAttribute('data-index'));
+                
+                // Update main image
+                const mainImage = document.querySelector(`.main-image[data-bike="${bikeId}"]`);
+                mainImage.src = motorcycleImages[bikeId][index];
+                
+                // Update active thumbnail
+                document.querySelectorAll(`.thumbnail[data-bike="${bikeId}"]`).forEach(thumb => {
+                    thumb.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Update current index
+                currentImageIndex[bikeId] = index;
+                
+                // Update image counter
+                const counter = document.querySelector(`.image-counter[data-bike="${bikeId}"]`);
+                if (counter) {
+                    counter.textContent = `${index + 1}/${motorcycleImages[bikeId].length}`;
+                }
+            });
+        });
+
+        // Gallery navigation
+        document.querySelectorAll('.gallery-nav').forEach(nav => {
+            nav.addEventListener('click', function() {
+                const bikeId = this.getAttribute('data-bike');
+                const isNext = this.classList.contains('next');
+                const totalImages = motorcycleImages[bikeId].length;
+                
+                // Calculate new index
+                let newIndex = currentImageIndex[bikeId];
+                if (isNext) {
+                    newIndex = (newIndex + 1) % totalImages;
+                } else {
+                    newIndex = (newIndex - 1 + totalImages) % totalImages;
+                }
+                
+                // Update main image
+                const mainImage = document.querySelector(`.main-image[data-bike="${bikeId}"]`);
+                mainImage.src = motorcycleImages[bikeId][newIndex];
+                
+                // Update active thumbnail
+                document.querySelectorAll(`.thumbnail[data-bike="${bikeId}"]`).forEach(thumb => {
+                    thumb.classList.remove('active');
+                });
+                document.querySelector(`.thumbnail[data-bike="${bikeId}"][data-index="${newIndex}"]`).classList.add('active');
+                
+                // Update current index
+                currentImageIndex[bikeId] = newIndex;
+                
+                // Update image counter
+                const counter = document.querySelector(`.image-counter[data-bike="${bikeId}"]`);
+                if (counter) {
+                    counter.textContent = `${newIndex + 1}/${totalImages}`;
+                }
+            });
+        });
+
+        // Show navigation on hover
+        document.querySelectorAll('.gallery-container').forEach(container => {
+            container.addEventListener('mouseenter', function() {
+                const bikeId = this.querySelector('.main-image').getAttribute('data-bike');
+                const prevBtn = document.querySelector(`.gallery-nav.prev[data-bike="${bikeId}"]`);
+                const nextBtn = document.querySelector(`.gallery-nav.next[data-bike="${bikeId}"]`);
+                const counter = document.querySelector(`.image-counter[data-bike="${bikeId}"]`);
+                
+                if (prevBtn && nextBtn && counter) {
+                    prevBtn.classList.remove('hidden');
+                    nextBtn.classList.remove('hidden');
+                    counter.classList.remove('hidden');
+                }
+            });
+            
+            container.addEventListener('mouseleave', function() {
+                const bikeId = this.querySelector('.main-image').getAttribute('data-bike');
+                const prevBtn = document.querySelector(`.gallery-nav.prev[data-bike="${bikeId}"]`);
+                const nextBtn = document.querySelector(`.gallery-nav.next[data-bike="${bikeId}"]`);
+                const counter = document.querySelector(`.image-counter[data-bike="${bikeId}"]`);
+                
+                if (prevBtn && nextBtn && counter) {
+                    prevBtn.classList.add('hidden');
+                    nextBtn.classList.add('hidden');
+                    counter.classList.add('hidden');
+                }
+            });
+        });
+
+        // Scroll animation
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+        
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+        
+        const displayScrollElement = (element) => {
+            element.classList.add('animated');
+        };
+        
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.2)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        
+        // Initialize scroll animation on page load
+        handleScrollAnimation();
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+ <script>
+        // Cookie Consent Management
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookiePreferences = document.getElementById('cookiePreferences');
+    const acceptAllBtn = document.getElementById('acceptAll');
+    const rejectNonEssentialBtn = document.getElementById('rejectNonEssential');
+    const managePreferencesBtn = document.getElementById('managePreferences');
+    const savePreferencesBtn = document.getElementById('savePreferences');
+    const analyticsCheckbox = document.getElementById('preferenceAnalytics');
+    const marketingCheckbox = document.getElementById('preferenceMarketing');
+    
+    // Check if user has already made a choice
+    if (!getCookie('cookie_consent')) {
+        // Show banner if no consent decision has been made
+        setTimeout(() => {
+            cookieBanner.classList.add('active');
+        }, 1000);
+    } else {
+        // Load cookies based on previous consent
+        loadCookiesAccordingToConsent();
+    }
+    
+    // Accept all cookies
+    acceptAllBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'all', 365);
+        setCookie('cookie_analytics', 'true', 365);
+        setCookie('cookie_marketing', 'true', 365);
+        cookieBanner.classList.remove('active');
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Reject non-essential cookies
+    rejectNonEssentialBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'necessary', 365);
+        setCookie('cookie_analytics', 'false', 365);
+        setCookie('cookie_marketing', 'false', 365);
+        cookieBanner.classList.remove('active');
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Show preferences panel
+    managePreferencesBtn.addEventListener('click', function() {
+        cookiePreferences.classList.add('active');
+        managePreferencesBtn.style.display = 'none';
+        savePreferencesBtn.style.display = 'block';
+        
+        // Set checkboxes based on current preferences
+        const analyticsConsent = getCookie('cookie_analytics');
+        const marketingConsent = getCookie('cookie_marketing');
+        
+        if (analyticsConsent === 'true') analyticsCheckbox.checked = true;
+        if (marketingConsent === 'true') marketingCheckbox.checked = true;
+    });
+    
+    // Save preferences
+    savePreferencesBtn.addEventListener('click', function() {
+        setCookie('cookie_consent', 'custom', 365);
+        setCookie('cookie_analytics', analyticsCheckbox.checked ? 'true' : 'false', 365);
+        setCookie('cookie_marketing', marketingCheckbox.checked ? 'true' : 'false', 365);
+        
+        cookiePreferences.classList.remove('active');
+        savePreferencesBtn.style.display = 'none';
+        managePreferencesBtn.style.display = 'block';
+        cookieBanner.classList.remove('active');
+        
+        loadCookiesAccordingToConsent();
+    });
+    
+    // Function to get cookie value
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    // Function to set cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = `expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+    }
+    
+    // Function to load cookies based on user consent
+    function loadCookiesAccordingToConsent() {
+        const consent = getCookie('cookie_consent');
+        const analytics = getCookie('cookie_analytics');
+        const marketing = getCookie('cookie_marketing');
+        
+        // Always load necessary cookies (these would be implemented as needed)
+        loadNecessaryCookies();
+        
+        // Load other cookies based on consent
+        if (consent === 'all' || (consent === 'custom' && analytics === 'true')) {
+            loadAnalyticsCookies();
+        }
+        
+        if (consent === 'all' || (consent === 'custom' && marketing === 'true')) {
+            loadMarketingCookies();
+        }
+    }
+    
+    // Placeholder functions for cookie loading - implement based on your specific cookies
+    function loadNecessaryCookies() {
+        // These are essential cookies that are always loaded
+        console.log('Loading necessary cookies...');
+    }
+    
+    function loadAnalyticsCookies() {
+        // Implement your analytics cookies here (e.g., Google Analytics)
+        console.log('Loading analytics cookies...');
+        // Example: Google Analytics initialization would go here
+        // if (typeof gtag !== 'undefined') { gtag('config', 'YOUR_GA_ID'); }
+    }
+    
+    function loadMarketingCookies() {
+        // Implement your marketing cookies here
+        console.log('Loading marketing cookies...');
+    }
+});
+    </script>
+
+</body>
+</html>

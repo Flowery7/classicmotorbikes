@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Motorcycles Blog | Passion, History & Showroom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'latte': '#F5F1E8',
+                        'latte-dark': '#E8E4DB',
+                        'blood': '#8B0000',
+                        'blood-light': '#A52A2A',
+                        'charcoal': '#2F2F2F',
+                        'slate': '#4A4A4A',
+                        'graphite': '#6B6B6B',
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5F1E8;
+            color: #2F2F2F;
+        }
+        
+        .vintage-border {
+            border: 1px solid #8B0000;
+        }
+        
+        .vintage-button {
+            background-color: #F5F1E8;
+            color: #2F2F2F;
+            border: 1px solid #8B0000;
+            transition: all 0.3s ease;
+        }
+        
+        .vintage-button:hover {
+            background-color: #8B0000;
+            color: #F5F1E8;
+        }
+        
+        .vintage-button-primary {
+            background-color: #8B0000;
+            color: #F5F1E8;
+            border: 1px solid #8B0000;
+        }
+        
+        .vintage-button-primary:hover {
+            background-color: #A52A2A;
+            border-color: #A52A2A;
+        }
+        
+        .vintage-card {
+            background-color: #F5F1E8;
+            border: 1px solid #8B0000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .blog-image {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(245, 241, 232, 0.9);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #8B0000;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .blog-quote {
+            border-left: 3px solid #8B0000;
+            padding-left: 1.5rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6 vintage-border-b">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold flex items-center">
+                <i class="fas fa-motorcycle text-blood mr-2"></i>
+                Classic<span class="text-blood">Motorcycles</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Home</a>
+                <a href="index.html#catalog" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Catalogue</a>
+                <a href="index.html#our-story" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Our Story</a>
+                <a href="blog.html" class="nav-link text-blood font-medium">Blog</a>
+                <a href="index.html#testimonials" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Testimonials</a>
+                <a href="index.html#contact" class="nav-link text-charcoal hover:text-blood transition-colors font-medium">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-charcoal" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden absolute left-0 right-0 top-16 p-4 bg-latte vintage-border-b" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Home</a>
+                <a href="index.html#catalog" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Catalogue</a>
+                <a href="index.html#our-story" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Our Story</a>
+                <a href="blog.html" class="nav-link text-blood font-medium py-2">Blog</a>
+                <a href="index.html#testimonials" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Testimonials</a>
+                <a href="index.html#contact" class="nav-link text-charcoal hover:text-blood transition-colors font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+     <section 
+  class="relative py-32 px-6 parallax-bg bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg');"
+>
+    <div class="hero-overlay absolute inset-0 bg-black/40"></div>
+    
+    <div class="container mx-auto text-center relative z-10 text-latte">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 animate-fade-in">
+            Own a Classic
+        </h1>
+        <p class="text-xl max-w-2xl mx-auto mb-10 animate-slide-up">
+            Explore the elegance and raw power of our passion for meticulously restored classic motorbikes from the golden era of motorcycling.
+        </p>
+        <a href="#catalog" 
+           class="vintage-button-primary font-bold py-4 px-10 rounded-sm inline-block transition-colors transform hover:scale-105 shadow-md animate-slide-up">
+           Browse Motorcycles
+        </a>
+    </div>
+</section>
+
+    <!-- Blog Content -->
+    <section class="py-12 px-6 bg-latte">
+        <div class="container mx-auto max-w-4xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Blog Content -->
+                <div class="lg:col-span-2">
+                    <!-- Featured Article -->
+                    <article class="vintage-card rounded-sm p-6 mb-12">
+                        <div class="mb-6">
+                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Classic Motorcycle on Open Road" class="blog-image rounded-sm vintage-border">
+                        </div>
+                        <span class="text-blood text-sm font-medium">FEATURED ARTICLE</span>
+                        <h2 class="text-3xl font-serif font-bold my-4 text-charcoal">The Soul of Steel: Why Classic Motorcycles Captivate Us</h2>
+                        <div class="flex items-center text-slate text-sm mb-6">
+                            <span class="mr-4"><i class="fas fa-calendar mr-1"></i> 15 November 2023</span>
+                            <span><i class="fas fa-user mr-1"></i> Robert Johnson</span>
+                        </div>
+                        <p class="text-slate mb-4">There's something magical about the relationship between a rider and their classic motorcycle. It's more than mere transportation; it's a connection to history, craftsmanship, and the pure joy of the open road.</p>
+                        
+                        <p class="text-slate mb-4">Unlike modern machines filled with electronics and computer-controlled systems, classic motorcycles speak to us in a mechanical language we can understand. The distinctive rumble of a British parallel twin, the throaty roar of an American V-twin, the smooth purr of a Japanese inline-four—each has its own personality, its own story to tell.</p>
+                        
+                        <div class="blog-quote my-6 text-slate">
+                            <p class="text-lg">"A classic motorcycle isn't just a machine; it's a time capsule on two wheels, preserving not just engineering but memories, dreams, and the spirit of freedom from generations past."</p>
+                        </div>
+                        
+                        <h3 class="text-2xl font-serif font-bold my-4 text-charcoal">The Allure of Mechanical Simplicity</h3>
+                        
+                        <p class="text-slate mb-4">In our digital age, we're surrounded by devices that become obsolete within years. But a well-maintained classic motorcycle from the 1960s or 70s remains as functional and beautiful today as it was half a century ago. There's profound satisfaction in understanding every component, being able to diagnose issues by sound and feel, and performing your own maintenance.</p>
+                        
+                        <p class="text-slate mb-4">This mechanical transparency creates a bond between rider and machine that's difficult to replicate with modern vehicles. When you kickstart a classic bike to life, you're not just starting an engine—you're awakening a piece of history.</p>
+                        
+                        <h3 class="text-2xl font-serif font-bold my-4 text-charcoal">More Than Transportation—A Moving Meditation</h3>
+                        
+                        <p class="text-slate mb-4">Riding a classic motorcycle demands attention and engagement. Without modern aids like anti-lock brakes or traction control, you develop a deeper connection with the road and your surroundings. This heightened awareness becomes a form of moving meditation, where the worries of daily life fade away, replaced by the rhythm of the engine and the flow of the landscape.</p>
+                        
+                        <p class="text-slate mb-6">This immersive experience is why classic motorcycle owners often describe their rides as therapeutic. The combination of mechanical feedback, wind in your face, and the requirement to be fully present creates a mental state that's increasingly rare in our distracted world.</p>
+                        
+                        <div class="bg-latte-dark p-6 rounded-sm vintage-border my-6">
+                            <h4 class="font-serif font-bold text-lg mb-2 text-charcoal">The Joy of Preservation</h4>
+                            <p class="text-slate">Owning a classic motorcycle means becoming a custodian of history. Each scratch, each modification, each repair tells a story. By preserving these machines, we're not just maintaining metal and rubber—we're keeping alive the dreams and adventures of previous owners, ensuring future generations can experience the same joy we've found in these remarkable machines.</p>
+                        </div>
+                        
+                        <div class="flex items-center mt-8 pt-6 border-t border-blood/20">
+                            <div class="w-12 h-12 bg-blood rounded-full flex items-center justify-center text-latte font-bold mr-4">RJ</div>
+                            <div>
+                                <h4 class="font-bold text-charcoal">Robert Johnson</h4>
+                                <p class="text-sm text-slate">Founder of Classic Motorcycles and lifelong enthusiast</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Additional Blog Articles -->
+                    <h2 class="text-2xl font-serif font-bold mb-6 text-charcoal border-b border-blood/20 pb-2">More Stories</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Article 1 -->
+                        <article class="vintage-card rounded-sm overflow-hidden">
+                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Motorcycle Restoration" class="h-48 w-full object-cover">
+                            <div class="p-4">
+                                <h3 class="font-serif font-bold text-lg mb-2 text-charcoal">The Art of Restoration: Bringing History Back to Life</h3>
+                                <p class="text-slate text-sm mb-4">Discover the meticulous process of returning classic motorcycles to their former glory while preserving their authentic character.</p>
+                                <a href="#" class="text-blood hover:text-blood-light text-sm font-medium">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 2 -->
+                        <article class="vintage-card rounded-sm overflow-hidden">
+                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Motorcycle Collection" class="h-48 w-full object-cover">
+                            <div class="p-4">
+                                <h3 class="font-serif font-bold text-lg mb-2 text-charcoal">Building a Collection: Where to Start</h3>
+                                <p class="text-slate text-sm mb-4">Expert advice for new collectors on choosing your first classic motorcycle and building a meaningful collection over time.</p>
+                                <a href="#" class="text-blood hover:text-blood-light text-sm font-medium">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- About Section -->
+                    <div class="vintage-card rounded-sm p-6 mb-8">
+                        <h3 class="font-serif font-bold text-xl mb-4 text-charcoal border-b border-blood/20 pb-2">About This Blog</h3>
+                        <p class="text-slate mb-4">Welcome to our journal dedicated to the passion, history, and craftsmanship of classic motorcycles. Here, we share stories, insights, and the pure joy that these magnificent machines bring to our lives.</p>
+                        <p class="text-slate">Written by enthusiasts for enthusiasts.</p>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="vintage-card rounded-sm p-6 mb-8">
+                        <h3 class="font-serif font-bold text-xl mb-4 text-charcoal border-b border-blood/20 pb-2">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-slate hover:text-blood transition-colors"><i class="fas fa-angle-right text-blood mr-2"></i> Restoration Stories</a></li>
+                            <li><a href="#" class="text-slate hover:text-blood transition-colors"><i class="fas fa-angle-right text-blood mr-2"></i> Collector Insights</a></li>
+                            <li><a href="#" class="text-slate hover:text-blood transition-colors"><i class="fas fa-angle-right text-blood mr-2"></i> Riding Experiences</a></li>
+                            <li><a href="#" class="text-slate hover:text-blood transition-colors"><i class="fas fa-angle-right text-blood mr-2"></i> Technical Guides</a></li>
+                            <li><a href="#" class="text-slate hover:text-blood transition-colors"><i class="fas fa-angle-right text-blood mr-2"></i> Historical Features</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="vintage-card rounded-sm p-6">
+                        <h3 class="font-serif font-bold text-xl mb-4 text-charcoal border-b border-blood/20 pb-2">Stay Updated</h3>
+                        <p class="text-slate mb-4">Subscribe to receive our latest articles and restoration stories directly to your inbox.</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-latte border border-blood/30 p-2 rounded-l-sm w-full focus:outline-none focus:border-blood">
+                            <button class="bg-blood hover:bg-blood-light text-latte p-2 rounded-r-sm transition-colors">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showroom Location -->
+    <section class="py-16 px-6 bg-latte-dark">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold mb-4 text-charcoal">Visit Our Showroom</h2>
+                <div class="w-24 h-1 bg-blood mx-auto mb-6"></div>
+                <p class="text-lg text-slate max-w-2xl mx-auto">Come see our collection of meticulously restored classic motorcycles in person</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-6 text-charcoal">Find Us</h3>
+                    <div class="vintage-card rounded-sm p-6 mb-6">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-blood mt-1 mr-3"></i>
+                            <div>
+                                <p class="text-slate font-medium">123 Vintage Avenue</p>
+                                <p class="text-slate">Jewellery Quarter</p>
+                                <p class="text-slate">Birmingham, B1 1AA</p>
+                                <p class="text-slate">United Kingdom</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone text-blood mr-3"></i>
+                            <p class="text-slate">0121 123 4567</p>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-envelope text-blood mr-3"></i>
+                            <p class="text-slate">info@classicmotorcycles.co.uk</p>
+                        </div>
+                        
+                        <h4 class="font-serif font-bold text-lg mb-4 text-charcoal">Business Hours</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-slate">Monday - Friday</span>
+                                <span class="text-slate font-medium">9am - 6pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate">Saturday</span>
+                                <span class="text-slate font-medium">10am - 4pm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate">Sunday</span>
+                                <span class="text-slate font-medium">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-latte p-6 rounded-sm vintage-border">
+                        <h4 class="font-serif font-bold text-lg mb-2 text-charcoal">Planning Your Visit</h4>
+                        <p class="text-slate text-sm mb-4">Our showroom is located in Birmingham's historic Jewellery Quarter, easily accessible by public transport with parking available nearby.</p>
+                        <p class="text-slate text-sm">We recommend booking an appointment for a personalised viewing, though walk-ins are always welcome during business hours.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-6 text-charcoal">Location Map</h3>
+                    <div class="vintage-card rounded-sm overflow-hidden">
+                        <!-- Google Maps Embed -->
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.552251394646!2d-1.9135544230900255!3d52.48937207205113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc7a2d9978e9%3A0x1e6e3f41b4773928!2sJewellery%20Quarter%2C%20Birmingham!5e0!3m2!1sen!2suk!4v1699987205204!5m2!1sen!2suk" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="p-4 bg-charcoal text-latte">
+                            <p class="text-sm"><i class="fas fa-info-circle mr-2"></i> Use the map above to find our showroom location in Birmingham's Jewellery Quarter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-latte py-12 px-6 vintage-border-t">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4 flex items-center">
+                        <i class="fas fa-motorcycle text-blood mr-2"></i>
+                        Classic<span class="text-blood">Motorcycles</span>
+                    </h3>
+                    <p class="text-graphite mb-4">Preserving motorcycle heritage since 1989.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-graphite hover:text-blood transition-colors">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-graphite hover:text-blood transition-colors">Home</a></li>
+                        <li><a href="index.html#catalog" class="text-graphite hover:text-blood transition-colors">Motorcycle Catalogue</a></li>
+                        <li><a href="index.html#our-story" class="text-graphite hover:text-blood transition-colors">Our Story</a></li>
+                        <li><a href="blog.html" class="text-graphite hover:text-blood transition-colors">Blog</a></li>
+                        <li><a href="index.html#contact" class="text-graphite hover:text-blood transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Motorcycle Sales</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Restoration Services</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Appraisals</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Parts Sourcing</a></li>
+                        <li><a href="#" class="text-graphite hover:text-blood transition-colors">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-latte">Newsletter</h4>
+                    <p class="text-graphite mb-4">Subscribe to receive updates on new arrivals and restoration projects.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="bg-slate text-latte p-2 rounded-l-sm w-full focus:outline-none focus:border-blood border border-blood/30">
+                        <button class="bg-blood hover:bg-blood-light text-latte p-2 rounded-r-sm transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate/20 mt-8 pt-8 text-center text-graphite">
+                <p>&copy; 2023 Classic Motorcycles. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
