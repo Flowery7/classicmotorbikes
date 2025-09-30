@@ -559,6 +559,109 @@ input:checked + .preference-slider:before {
         min-width: 100%;
     }
 }
+
+ /* Dropdown Styles */
+        .details-dropdown {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background: #F5F1E8;
+            border: 1px solid #8B0000;
+            border-bottom: none;
+            border-radius: 2px 2px 0 0;
+            padding: 1.5rem;
+            z-index: 20;
+            display: none;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .details-dropdown.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .dropdown-content {
+            line-height: 1.6;
+        }
+        
+        .dropdown-content p {
+            margin-bottom: 1rem;
+            color: #4A4A4A;
+            font-size: 0.9rem;
+        }
+        
+        .dropdown-content p:last-child {
+            margin-bottom: 1.5rem;
+        }
+        
+        .call-now-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: #8B0000;
+            color: #F5F1E8;
+            border: 1px solid #8B0000;
+            border-radius: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .call-now-btn:hover {
+            background: #A52A2A;
+            border-color: #A52A2A;
+        }
+        
+        .dropdown-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            color: #8B0000;
+            cursor: pointer;
+            font-size: 1.25rem;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dropdown-close:hover {
+            color: #A52A2A;
+        }
+        
+        /* Button container with dropdown positioning */
+        .details-button-container {
+            position: relative;
+            flex: 1;
+        }
+        
+        /* Ensure dropdown doesn't overflow on mobile */
+        @media (max-width: 768px) {
+            .details-dropdown {
+                left: -10px;
+                right: -10px;
+            }
+        }
+
     </style>
 </head>
 
@@ -779,487 +882,328 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Motorcycle Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Motorcycle Card 1 -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-1">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="1972 Triumph Bonneville" class="w-full h-64 object-cover main-image" data-bike="1">
-                            <div class="absolute top-4 right-4 price-tag">£2,800</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-72841
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="1">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next hidden" data-bike="1">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="image-counter hidden" data-bike="1">1/7</div>
+               <!-- Motorcycle Card 1 -->
+            <div class="vintage-card rounded-sm overflow-hidden" id="bike-1">
+                <div class="gallery-container">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="1972 Triumph Bonneville" class="w-full h-64 object-cover main-image" data-bike="1">
+                        <div class="absolute top-4 right-4 price-tag">£2,800</div>
+                        <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                            Item #CM-72841
                         </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Triumph Bonneville Front View" class="thumbnail h-16 w-full object-cover active" data-bike="1" data-index="0">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Triumph Bonneville Side View" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="1">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Triumph Bonneville Engine" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Triumph Bonneville Details" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Triumph Bonneville Rear" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Triumph Bonneville Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Triumph Bonneville Wheels" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="6">
-                        </div>
+                        <button class="gallery-nav prev hidden" data-bike="1">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next hidden" data-bike="1">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="image-counter hidden" data-bike="1">1/7</div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1972 Triumph Bonneville</h3>
-                        <p class="text-slate mb-4">Fully restored to original specifications with matching numbers.</p>
-                        
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>650cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>110 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>12,450 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 12 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">£2,800</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1972</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="1">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="1">
-                                <i class="fas fa-calendar-alt"></i>
-                            </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="1">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="1">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="1">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="1">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="thumbnail-gallery">
+                        <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Triumph Bonneville Front View" class="thumbnail h-16 w-full object-cover active" data-bike="1" data-index="0">
+                        <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Triumph Bonneville Side View" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="1">
+                        <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Triumph Bonneville Engine" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="2">
+                        <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Triumph Bonneville Details" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="3">
+                        <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Triumph Bonneville Rear" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="4">
+                        <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Triumph Bonneville Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="5">
+                        <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Triumph Bonneville Wheels" class="thumbnail h-16 w-full object-cover" data-bike="1" data-index="6">
                     </div>
                 </div>
-                
-                <!-- Motorcycle Card 2 -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
-                            <div class="absolute top-4 right-4 price-tag">£1,750</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-62983
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="2">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next hidden" data-bike="2">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="image-counter hidden" data-bike="2">1/7</div>
+                <div class="p-6">
+                    <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1972 Triumph Bonneville</h3>
+                    <p class="text-slate mb-4">Fully restored to original specifications with matching numbers.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-cogs text-blood mr-2"></i>
+                            <span>650cc</span>
                         </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                        <div class="flex items-center">
+                            <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                            <span>110 mph</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-road text-blood mr-2"></i>
+                            <span>12,450 miles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt text-blood mr-2"></i>
+                            <span>MOT: 12 months</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
-                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-blood font-bold text-lg">£2,800</span>
+                        <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1972</span>
+                    </div>
+                    
+                    <!-- Enhanced View Details Button with Dropdown -->
+                    <div class="details-button-container">
+                        <button class="vintage-button py-2 rounded-sm transition-colors w-full view-details" data-bike="1">
+                            View Details <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
                         
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>900cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>115 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>8,720 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 6 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">£1,750</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
-                                <i class="fas fa-calendar-alt"></i>
+                        <!-- Dropdown Content -->
+                        <div class="details-dropdown" id="dropdown-1">
+                            <button class="dropdown-close">
+                                <i class="fas fa-times"></i>
                             </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
-                                    <i class="fab fa-twitter"></i>
+                            
+                            <div class="dropdown-content">
+                                <p>This 1972 Triumph Bonneville represents British engineering at its finest. Meticulously restored to factory specifications with matching numbers, featuring the iconic 650cc parallel twin engine and period-correct finishes.</p>
+                                
+                                <p>Complete restoration completed in 2023 with full documentation and service history. Ready for immediate enjoyment with 12 months MOT. A true collector's piece with excellent investment potential.</p>
+                                
+                                <button class="call-now-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call Now: 0121 123 4567
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Motorcycle Card 2 -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
-                            <div class="absolute top-4 right-4 price-tag">£3,150</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-62983
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="2">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next hidden" data-bike="2">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="image-counter hidden" data-bike="2">1/7</div>
-                        </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
-                        </div>
+                    
+                    <div class="flex space-x-2 mb-4 mt-2">
+                        <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors call-now-mobile w-full">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
-                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
-                        
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>900cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>115 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>8,720 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 6 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">£3,150</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
-                                <i class="fas fa-calendar-alt"></i>
+                    
+                    <div class="border-t border-blood/20 pt-4">
+                        <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="1">
+                                <i class="fab fa-facebook"></i>
                             </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Motorcycle Card 2 -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
-                            <div class="absolute top-4 right-4 price-tag">£2,750</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-62983
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="2">
-                                <i class="fas fa-chevron-left"></i>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="1">
+                                <i class="fab fa-instagram"></i>
                             </button>
-                            <button class="gallery-nav next hidden" data-bike="2">
-                                <i class="fas fa-chevron-right"></i>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="1">
+                                <i class="fab fa-whatsapp"></i>
                             </button>
-                            <div class="image-counter hidden" data-bike="2">1/7</div>
-                        </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
-                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
-                        
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>900cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>115 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>8,720 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 6 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">2,750</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
-                                <i class="fas fa-calendar-alt"></i>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="1">
+                                <i class="fab fa-twitter"></i>
                             </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Motorcycle Card 2 -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-2">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
-                            <div class="absolute top-4 right-4 price-tag">£4,350</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-62983
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="2">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next hidden" data-bike="2">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="image-counter hidden" data-bike="2">1/7</div>
-                        </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
-                        <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
-                        
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>900cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>115 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>8,720 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 6 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">£4,350</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="2">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="2">
-                                <i class="fas fa-calendar-alt"></i>
-                            </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional motorcycle cards with GBP prices -->
-                <div class="vintage-card rounded-sm overflow-hidden scroll-animate" id="bike-3">
-                    <div class="gallery-container">
-                        <div class="relative">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="1975 Norton Commando 850" class="w-full h-64 object-cover main-image" data-bike="3">
-                            <div class="absolute top-4 right-4 price-tag">£3,200</div>
-                            <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
-                                Item #CM-58219
-                            </div>
-                            <button class="gallery-nav prev hidden" data-bike="3">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next hidden" data-bike="3">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="image-counter hidden" data-bike="3">1/7</div>
-                        </div>
-                        <div class="thumbnail-gallery">
-                            <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Norton Commando Front View" class="thumbnail h-16 w-full object-cover active" data-bike="3" data-index="0">
-                            <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Norton Commando Side View" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="1">
-                            <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Norton Commando Engine" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="2">
-                            <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Norton Commando Details" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="3">
-                            <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Norton Commando Rear" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="4">
-                            <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Norton Commando Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="5">
-                            <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Norton Commando Wheels" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="6">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1975 Norton Commando 850</h3>
-                        <p class="text-slate mb-4">British classic with recent comprehensive restoration.</p>
-                        
-                        <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-cogs text-blood mr-2"></i>
-                                <span>828cc</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-tachometer-alt text-blood mr-2"></i>
-                                <span>115 mph</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-road text-blood mr-2"></i>
-                                <span>15,230 miles</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-file-alt text-blood mr-2"></i>
-                                <span>MOT: 12 months</span>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-blood font-bold text-lg">£3,200</span>
-                            <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1975</span>
-                        </div>
-                        <div class="flex space-x-2 mb-4">
-                            <button class="flex-1 vintage-button py-2 rounded-sm transition-colors view-details" data-bike="3">View Details</button>
-                            <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors book-viewing" data-bike="3">
-                                <i class="fas fa-calendar-alt"></i>
-                            </button>
-                        </div>
-                        <div class="border-t border-blood/20 pt-4">
-                            <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
-                            <div class="flex justify-center space-x-4">
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="3">
-                                    <i class="fab fa-facebook"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="3">
-                                    <i class="fab fa-instagram"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="3">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                                <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="3">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Motorcycle Card 2 -->
+            <div class="vintage-card rounded-sm overflow-hidden" id="bike-2">
+                <div class="gallery-container">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="1968 Harley-Davidson Sportster" class="w-full h-64 object-cover main-image" data-bike="2">
+                        <div class="absolute top-4 right-4 price-tag">£1,750</div>
+                        <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                            Item #CM-62983
+                        </div>
+                        <button class="gallery-nav prev hidden" data-bike="2">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next hidden" data-bike="2">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="image-counter hidden" data-bike="2">1/7</div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Harley Sportster Front View" class="thumbnail h-16 w-full object-cover active" data-bike="2" data-index="0">
+                        <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Harley Sportster Side View" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="1">
+                        <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Harley Sportster Engine" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="2">
+                        <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Harley Sportster Details" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="3">
+                        <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Harley Sportster Rear" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="4">
+                        <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Harley Sportster Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="5">
+                        <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Harley Sportster Wheels" class="thumbnail h-16 w-full object-cover" data-bike="2" data-index="6">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1968 Harley-Davidson Sportster</h3>
+                    <p class="text-slate mb-4">Iconic American muscle with original paint and matching engine.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-cogs text-blood mr-2"></i>
+                            <span>900cc</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                            <span>115 mph</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-road text-blood mr-2"></i>
+                            <span>8,720 miles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt text-blood mr-2"></i>
+                            <span>MOT: 6 months</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-blood font-bold text-lg">£1,750</span>
+                        <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1968</span>
+                    </div>
+                    
+                    <!-- Enhanced View Details Button with Dropdown -->
+                    <div class="details-button-container">
+                        <button class="vintage-button py-2 rounded-sm transition-colors w-full view-details" data-bike="2">
+                            View Details <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                        
+                        <!-- Dropdown Content -->
+                        <div class="details-dropdown" id="dropdown-2">
+                            <button class="dropdown-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="dropdown-content">
+                                <p>This 1968 Harley-Davidson Sportster XLH is a true piece of American motorcycling history. Featuring the original factory paint and matching-numbers 900cc V-twin engine that delivers that iconic Harley rumble.</p>
+                                
+                                <p>Maintained in excellent condition with recent mechanical overhaul. Includes original documentation and service records. A rare opportunity to own an authentic American classic with proven investment value.</p>
+                                
+                                <button class="call-now-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call Now: 0121 123 4567
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-2 mb-4 mt-2">
+                        <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors call-now-mobile w-full">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
+                    </div>
+                    
+                    <div class="border-t border-blood/20 pt-4">
+                        <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="2">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="2">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="2">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="2">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Motorcycle Card 3 -->
+            <div class="vintage-card rounded-sm overflow-hidden" id="bike-3">
+                <div class="gallery-container">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="1975 Norton Commando 850" class="w-full h-64 object-cover main-image" data-bike="3">
+                        <div class="absolute top-4 right-4 price-tag">£3,200</div>
+                        <div class="absolute top-4 left-4 bg-charcoal/80 text-latte text-xs px-2 py-1 rounded-sm">
+                            Item #CM-58219
+                        </div>
+                        <button class="gallery-nav prev hidden" data-bike="3">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next hidden" data-bike="3">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="image-counter hidden" data-bike="3">1/7</div>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <img src="https://images.pexels.com/photos/2393831/pexels-photo-2393831.jpeg" alt="Norton Commando Front View" class="thumbnail h-16 w-full object-cover active" data-bike="3" data-index="0">
+                        <img src="https://images.pexels.com/photos/17689659/pexels-photo-17689659/free-photo-of-classic-motorcycle-on-road.jpeg" alt="Norton Commando Side View" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="1">
+                        <img src="https://images.pexels.com/photos/2611658/pexels-photo-2611658.jpeg" alt="Norton Commando Engine" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="2">
+                        <img src="https://images.pexels.com/photos/2393821/pexels-photo-2393821.jpeg" alt="Norton Commando Details" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="3">
+                        <img src="https://images.pexels.com/photos/5192247/pexels-photo-5192247.jpeg" alt="Norton Commando Rear" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="4">
+                        <img src="https://images.pexels.com/photos/31554295/pexels-photo-31554295.jpeg" alt="Norton Commando Dashboard" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="5">
+                        <img src="https://images.pexels.com/photos/6304339/pexels-photo-6304339.jpeg" alt="Norton Commando Wheels" class="thumbnail h-16 w-full object-cover" data-bike="3" data-index="6">
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-serif font-bold mb-2 text-charcoal">1975 Norton Commando 850</h3>
+                    <p class="text-slate mb-4">British classic with recent comprehensive restoration.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-4 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-cogs text-blood mr-2"></i>
+                            <span>828cc</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-tachometer-alt text-blood mr-2"></i>
+                            <span>115 mph</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-road text-blood mr-2"></i>
+                            <span>15,230 miles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt text-blood mr-2"></i>
+                            <span>MOT: 12 months</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-blood font-bold text-lg">£3,200</span>
+                        <span class="bg-latte-dark text-charcoal px-3 py-1 rounded-sm text-sm vintage-border">1975</span>
+                    </div>
+                    
+                    <!-- Enhanced View Details Button with Dropdown -->
+                    <div class="details-button-container">
+                        <button class="vintage-button py-2 rounded-sm transition-colors w-full view-details" data-bike="3">
+                            View Details <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                        
+                        <!-- Dropdown Content -->
+                        <div class="details-dropdown" id="dropdown-3">
+                            <button class="dropdown-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="dropdown-content">
+                                <p>This 1975 Norton Commando 850 represents the final evolution of this legendary British motorcycle. Featuring the iconic 828cc parallel twin engine and Norton's innovative Isolastic frame that reduces vibration.</p>
+                                
+                                <p>Comprehensive restoration completed in 2022 with full service history and matching numbers. Ready for immediate enjoyment with 12 months MOT. An exceptional example of British engineering excellence.</p>
+                                
+                                <button class="call-now-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call Now: 0121 123 4567
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-2 mb-4 mt-2">
+                        <button class="vintage-button-primary py-2 px-4 rounded-sm transition-colors call-now-mobile w-full">
+                            <i class="fas fa-phone mr-2"></i>
+                            Call Now
+                        </button>
+                    </div>
+                    
+                    <div class="border-t border-blood/20 pt-4">
+                        <p class="text-xs text-graphite mb-2">Share this motorcycle:</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="facebook" data-bike="3">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="instagram" data-bike="3">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="whatsapp" data-bike="3">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button class="social-share-btn w-8 h-8 rounded-full flex items-center justify-center" data-platform="twitter" data-bike="3">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
             
             <div class="text-center mt-16 scroll-animate">
                 <button class="vintage-button-primary font-bold py-4 px-10 rounded-sm inline-block transition-colors transform hover:scale-105 shadow-md">
@@ -1662,6 +1606,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
     </script>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all view details buttons
+            const viewDetailsButtons = document.querySelectorAll('.view-details');
+            
+            // Add click event to each button
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const bikeId = this.getAttribute('data-bike');
+                    const dropdown = document.getElementById(`dropdown-${bikeId}`);
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.details-dropdown').forEach(dd => {
+                        if (dd !== dropdown) {
+                            dd.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                });
+            });
+            
+            // Close dropdown when clicking close button
+            document.querySelectorAll('.dropdown-close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.closest('.details-dropdown').classList.remove('active');
+                });
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                document.querySelectorAll('.details-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+            
+            // Prevent dropdown from closing when clicking inside it
+            document.querySelectorAll('.details-dropdown').forEach(dropdown => {
+                dropdown.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+            
+            // Call now button functionality
+            document.querySelectorAll('.call-now-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    alert('Calling: 0121 123 4567\nThis would initiate a phone call on mobile devices.');
+                    // Close dropdown after action
+                    this.closest('.details-dropdown').classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+
+
 
  <script>
         // Cookie Consent Management
